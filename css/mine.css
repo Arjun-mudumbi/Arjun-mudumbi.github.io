@@ -154,10 +154,48 @@
     margin-bottom: 50px;
 }
 .project-description{
-    width:300px
+    width:500px;
     float:left;
     margin-left: 120px;
     margin-top: 50px;
     font-size: 24px;
     text-align: left;
 }
+.exp {
+    width: 100%;
+}
+
+.expimgone {
+    width: 50%;
+    float: left;
+}
+
+.expimgtwo {
+    width: 50%;
+    float: left;
+}
+
+.expimgone img {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid black
+}
+
+.expimgtwo img {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid black
+}
+
+/* .whitebar{
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+} */
