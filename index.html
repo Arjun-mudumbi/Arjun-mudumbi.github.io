@@ -4,6 +4,7 @@
 
 <head>
     <title>Arjun Mudumbi Srinivasan</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/206894b849.js" crossorigin="anonymous"></script>
@@ -85,6 +86,76 @@
         </div>
     </div>
 <br>
+<div class='row'>
+    <div class='col'>
+        <div class="timeline">
+            <h2 class="timeline__item timeline__item--year">2017-2019</h2>
+            <div class="timeline__item" id='GMUEd'>
+                <div class='row'>
+                    <div class='col'>
+                        <img src='imgs/GMURGB.jpg' width="100%" height="100%">
+                    </div>
+                    <div class='col'>
+                        <h3 class="timeline__title">George Mason University</h3>
+                            <li class="timeline__blurb">Masters Degree</li>
+                            <li class="timeline__blurb">Master of Science in Data science</li>
+                            <li class='timeline__blurb'>Focus on Machine learning, Predictive analytics</li>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="timeline__item timeline__item--year">2013-2017</h2>
+
+            <div class="timeline__item">
+                <div class='row'>
+                    <div class='col'>
+                        <img src='imgs/cbit.png' width="100%" height="100%">
+                    </div>
+                    <div class='col'>
+                        <h3 class="timeline__title">Chaitanya Bharathi Institute of technology</h3>
+                            <li class='timeline__blurb'>Bachelors Degree</li>
+                            <li class='timeline__blurb'>Bachelor of engineering in Electrical engineering</li>
+                            <li class="timeline__blurb">Focus on applied math in Electrical engineering like fourier
+                                transformation etc</li>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="timeline__item timeline__item--year">2011-2013</h2>
+
+            <div class="timeline__item">
+                <div class='row'>
+                    <div class='col'>
+                        <img src='imgs/vision-narayana.png' width="100%" height="100%">
+                    </div>
+                    <div class='col'>
+                        <h3 class="timeline__title">Narayana Junior College</h3>
+                            <li class='timeline__blurb'>High school</li>
+                            <li class='timeline__blurb'>Graduated high school with concentration in math , physics and
+                                chemistry</li>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="timeline__item timeline__item--year">2001-2011</h2>
+
+            <div class="timeline__item">
+                <div class='row'>
+                    <div class='col'>
+                        <img src='imgs/DPS.jpg' width="100%" height="100%">
+                    </div>
+                    <div class='col'>
+                        <h3 class="timeline__title">Dilsukhnagar Public School</h3>
+                            <li class='timeline__blurb'>Secondary school</li>
+                            <li class='timeline__blurb'>From kindergarden to Secondary school education focusing on
+                                various subjects</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
     <div class='row'>
         <div class='col'>
             <h2 align='center' class="display-4" style="color:white"><b>Experience</b></h2>
@@ -121,7 +192,7 @@
     <br>
     <br>
     <div class='row text-center'>
-        <div class='col' style='display:none;' id='union2Info'>
+        <div class='col' style='display:none;' id='unionInfo'>
             <h3 style="color: white;">IT Analyst</h3>
             <h5 style="color: white;">Union Hospital 2019-Present</h5>
             <br>
@@ -188,7 +259,7 @@
                             </ul>
                         </div>
                         <div class='col'>
-                                <div class="card mx-auto text-justify" style=" height:400px;width: 22rem; background-color: lightblue; border-radius: 10%;">
+                                <div class="card mx-auto text-justify" style=" height:400px;width: 22rem; background-color: black; border-radius: 10%;">
                                     <img class="card-img-top" src="imgs/Website.PNG" alt="Card image cap"
                                             style="height:300px; border-radius: 10%;">
                                         <br>
@@ -274,7 +345,7 @@
                             </div>
                             <div class='col'>
                                 <div class="card mx-auto text-justify"
-                                    style=" height:400px;width: 22rem; background-color: rgb(24, 24, 24); border-radius:
+                                    style=" height:400px;width: 22rem; background-color: black; border-radius:
                                     10%;">
                                     <img class="card-img-top" src="imgs/sarcasm.png" alt="Card image cap"
                                         style="height:300px;border: 5px solid black; border-radius: 10%;">
@@ -347,9 +418,10 @@
     </div>
     <br>
     <br>
-    <div class='row'>
+    <div class='row text-center'>
         <div class='col'>
             <h2 align='center' class="display-4" style="color:white"><b>Contact me</b></h2>
+            <p style="color:white">Thank you for visiting my website and making all the way upto here. You can contact me by any of the following means</p>
         </div>
     </div>
     <br>
@@ -374,11 +446,42 @@
 <script>
     function UnionInfo() {
         document.getElementById("RAInfo").style.display = "none";
-        document.getElementById("unionInfo").style.display = "flexbox";
+        document.getElementById("unionInfo").style.display = "block";
     }
     function RAInfo(){
-        document.getElementById("RAInfo").style.display = "flexbox";
+        document.getElementById("RAInfo").style.display = "block";
         document.getElementById("unionInfo").style.display = "none";
     }
+</script>
+<script>
+    function addAnimationEduSection() {
+        var elements;
+        var windowHeight;
+
+        function init() {
+            elements = document.querySelectorAll('div.timeline__item');
+            windowHeight = window.innerHeight;
+        }
+
+        function checkPosition() {
+            for (var i = 0; i < elements.length; i++) {
+                var element = elements[i];
+                var positionFromTop = elements[i].getBoundingClientRect().top;
+                if (positionFromTop - windowHeight <= 0) {
+                    if (i % 2 == 0) {
+                        element.classList.add('w3-animate-left');
+                    } else {
+                        element.classList.add('w3-animate-right');
+                    }
+
+                }
+            }
+        }
+        window.addEventListener('scroll', checkPosition);
+        window.addEventListener('resize', init);
+        init();
+        checkPosition();
+    }
+    addAnimationEduSection();
 </script>
 </html>
